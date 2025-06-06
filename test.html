@@ -1,0 +1,327 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="https://unpkg.com/carbon-components@10.47.0/css/carbon-components.min.css">
+<script src="https://unpkg.com/carbon-components@10.47.0/scripts/carbon-components.min.js" defer></script>
+
+
+
+
+
+
+
+  </head>
+<body>
+
+<div class="table-container">
+            <!-- Table Toolbar -->
+            <div class="bx--data-table-header">
+                <h4 class="bx--data-table-header__title">Ranked Variables</h4>
+                <p class="bx--data-table-header__description">Policy data structure variables and their relationships</p>
+            </div>
+
+            <!-- Table Actions -->
+            <section class="bx--table-toolbar">
+                <div class="bx--table-toolbar__content">
+                    <!-- Search -->
+                    <div class="bx--table-toolbar__search bx--toolbar-search-container-expandable">
+                        <div class="bx--search bx--search--sm" data-search role="search">
+                            <div class="bx--search-magnifier">
+                                <svg class="bx--search-magnifier-icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="m15.5 13.12-3.99-3.99c.69-1.11 1.11-2.41 1.11-3.83 0-4.03-3.27-7.3-7.3-7.3C1.29-2 -2 1.27-2 5.3c0 4.03 3.27 7.3 7.3 7.3 1.42 0 2.72-.42 3.83-1.11l3.99 3.99c.18.18.43.29.71.29.28 0 .53-.11.71-.29.39-.39.39-1.02 0-1.41zM1.49 5.3c0-2.99 2.43-5.42 5.42-5.42S12.33 2.31 12.33 5.3s-2.43 5.42-5.42 5.42S1.49 8.29 1.49 5.3z"></path>
+                                </svg>
+                            </div>
+                            <label class="bx--label bx--visually-hidden" for="search-1">Search</label>
+                            <input class="bx--search-input" type="text" id="search-1" placeholder="Search table" autocomplete="off" />
+                            <button class="bx--search-close bx--search-close--hidden" type="button" aria-label="Clear search input">
+                                <svg class="bx--search-clear" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="m12 4.7-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8 12 4.7z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Actions Menu -->
+                    <div class="bx--overflow-menu" data-overflow-menu>
+                        <button class="bx--overflow-menu__trigger bx--tooltip__trigger bx--tooltip--a11y bx--tooltip--bottom bx--tooltip--align-center" aria-label="More actions" aria-haspopup="true" aria-expanded="false">
+                            <svg class="bx--overflow-menu__icon" width="16" height="16" viewBox="0 0 16 16">
+                                <path d="M8 3c.6 0 1-.4 1-1s-.4-1-1-1-1 .4-1 1 .4 1 1 1zM8 6c-.6 0-1 .4-1 1s.4 1 1 1 1-.4 1-1-.4-1-1-1zM8 9c-.6 0-1 .4-1 1s.4 1 1 1 1-.4 1-1-.4-1-1-1z"></path>
+                            </svg>
+                        </button>
+                        <div class="bx--overflow-menu-options bx--overflow-menu--flip" tabindex="-1" role="menu" aria-labelledby="overflow-menu-1">
+                            <button class="bx--overflow-menu-options__btn" role="menuitem">
+                                <div class="bx--overflow-menu-options__option-content">Export to CSV</div>
+                            </button>
+                            <button class="bx--overflow-menu-options__btn" role="menuitem">
+                                <div class="bx--overflow-menu-options__option-content">Export to PDF</div>
+                            </button>
+                            <button class="bx--overflow-menu-options__btn" role="menuitem">
+                                <div class="bx--overflow-menu-options__option-content">Print</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Data Table -->
+            <table class="bx--data-table bx--data-table--compact" data-table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class="bx--table-column-sort" tabindex="0" data-column-id="variable" data-event="sort">
+                            <button class="bx--table-sort" data-event="sort" title="Sort rows by this header in ascending order">
+                                <span class="bx--table-header-label">Ranked Variable</span>
+                                <svg class="bx--table-sort__icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M12.3 9.3L8.5 13.1c-.1.1-.3.1-.4 0L4.2 9.3c-.1-.1-.1-.3 0-.4.1-.1.3-.1.4 0L8 12.2l3.4-3.4c.1-.1.3-.1.4 0s.2.3.1.4zM4.2 6.7L8 2.9c.1-.1.3-.1.4 0l3.8 3.8c.1.1.1.3 0 .4-.1.1-.3.1-.4 0L8 3.8 4.6 7.2c-.1.1-.3.1-.4 0-.1-.2-.1-.4 0-.5z"></path>
+                                </svg>
+                            </button>
+                        </th>
+                        <th class="bx--table-column-sort" tabindex="0" data-column-id="description" data-event="sort">
+                            <button class="bx--table-sort" data-event="sort" title="Sort rows by this header in ascending order">
+                                <span class="bx--table-header-label">Description</span>
+                                <svg class="bx--table-sort__icon" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M12.3 9.3L8.5 13.1c-.1.1-.3.1-.4 0L4.2 9.3c-.1-.1-.1-.3 0-.4.1-.1.3-.1.4 0L8 12.2l3.4-3.4c.1-.1.3-.1.4 0s.2.3.1.4zM4.2 6.7L8 2.9c.1-.1.3-.1.4 0l3.8 3.8c.1.1.1.3 0 .4-.1.1-.3.1-.4 0L8 3.8 4.6 7.2c-.1.1-.3.1-.4 0-.1-.2-.1-.4 0-.5z"></path>
+                                </svg>
+                            </button>
+                        </th>
+                        <th>Business term</th>
+                        <th>Source program</th>
+                        <th>Related variables</th>
+                        <th>Aliases</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Row 1: CA-POLICY-NO -->
+                    <tr class="bx--parent-row" data-parent-row>
+                        <td class="bx--table-expand">
+                            <button class="bx--table-expand__button" type="button" title="Expand row" aria-label="Expand row" aria-expanded="false">
+                                <svg class="bx--table-expand__svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M8 11L3 6l1-1 4 4 4-4 1 1-5 5z"></path>
+                                </svg>
+                            </button>
+                        </td>
+                        <td><span class="bx--link">CA-POLICY-NO</span></td>
+                        <td><strong>●AI</strong> Policy number identification</td>
+                        <td><strong>●AI</strong> Policy identifier</td>
+                        <td>LGAPOL01.cbl</td>
+                        <td>VEHICLE-BODY-TYPE, VEHIC...</td>
+                        <td>CA-POLICY-NUM</td>
+                    </tr>
+                    <tr class="bx--expandable-row bx--expandable-row--hidden" data-child-row>
+                        <td colspan="7">
+                            <div class="bx--data-table-expandable-content">
+                                <h5>Policy Number Details</h5>
+                                <p>This field contains the unique policy number identifier used across the motor policy system.</p>
+                                <ul>
+                                    <li><strong>Field Length:</strong> 15 characters</li>
+                                    <li><strong>Format:</strong> Alphanumeric with dashes (XXX-XXXX-XXXX)</li>
+                                    <li><strong>Validation:</strong> Required, Unique</li>
+                                    <li><strong>Used in Programs:</strong> LGAPOL01.cbl, LGUPDB01.cbl</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 2: CA-M-VEHICLE-TYPE -->
+                    <tr class="bx--parent-row" data-parent-row>
+                        <td class="bx--table-expand">
+                            <button class="bx--table-expand__button" type="button" title="Expand row" aria-label="Expand row" aria-expanded="false">
+                                <svg class="bx--table-expand__svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M8 11L3 6l1-1 4 4 4-4 1 1-5 5z"></path>
+                                </svg>
+                            </button>
+                        </td>
+                        <td><span class="bx--link">CA-M-VEHICLE-TYPE</span></td>
+                        <td><strong>●AI</strong> Type of insured vehicle</td>
+                        <td><strong>●AI</strong> Vehicle Classification</td>
+                        <td>LGAPVS01.cbl, LGUPO01...</td>
+                        <td>REGISTRATION-STATE, VEHI...</td>
+                        <td>VEHICLE-TYPE-CODE</td>
+                    </tr>
+                    <tr class="bx--expandable-row bx--expandable-row--hidden" data-child-row>
+                        <td colspan="7">
+                            <div class="bx--data-table-expandable-content">
+                                <h5>Vehicle Type Classification</h5>
+                                <p>Defines the category and type of vehicle being insured under the motor policy.</p>
+                                <ul>
+                                    <li><strong>Field Length:</strong> 3 characters</li>
+                                    <li><strong>Valid Values:</strong> CAR, TRK, MOT, SUV, VAN</li>
+                                    <li><strong>Default:</strong> CAR</li>
+                                    <li><strong>Impact:</strong> Affects premium calculation and coverage options</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 3: CA-M-PREMIUM-AMT -->
+                    <tr class="bx--parent-row" data-parent-row>
+                        <td class="bx--table-expand">
+                            <button class="bx--table-expand__button" type="button" title="Expand row" aria-label="Expand row" aria-expanded="false">
+                                <svg class="bx--table-expand__svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M8 11L3 6l1-1 4 4 4-4 1 1-5 5z"></path>
+                                </svg>
+                            </button>
+                        </td>
+                        <td><span class="bx--link">CA-M-PREMIUM-AMT</span></td>
+                        <td><strong>●AI</strong> Calculated premium amount</td>
+                        <td><strong>●AI</strong> Premium Calculation</td>
+                        <td>LGAPOL01.cbl</td>
+                        <td>VEHICLE-BODY-TYPE</td>
+                        <td>CALCULATED-PREMIUM</td>
+                    </tr>
+                    <tr class="bx--expandable-row bx--expandable-row--hidden" data-child-row>
+                        <td colspan="7">
+                            <div class="bx--data-table-expandable-content">
+                                <h5>Premium Amount Calculation</h5>
+                                <p>The calculated premium amount for the motor policy based on risk factors and coverage options.</p>
+                                <ul>
+                                    <li><strong>Field Format:</strong> 9999999.99 (Currency)</li>
+                                    <li><strong>Calculation Logic:</strong> Base rate + Risk factors + Coverage adjustments</li>
+                                    <li><strong>Validation:</strong> Must be greater than $0.00</li>
+                                    <li><strong>Processing Program:</strong> LGUPDB01.cbl</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 4: CA-DISCOUNT-AMOUNT -->
+                    <tr class="bx--parent-row" data-parent-row>
+                        <td class="bx--table-expand">
+                            <button class="bx--table-expand__button" type="button" title="Expand row" aria-label="Expand row" aria-expanded="false">
+                                <svg class="bx--table-expand__svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M8 11L3 6l1-1 4 4 4-4 1 1-5 5z"></path>
+                                </svg>
+                            </button>
+                        </td>
+                        <td><span class="bx--link">CA-DISCOUNT-AMOUNT</span></td>
+                        <td><strong>●AI</strong> Discount applied to premium</td>
+                        <td><strong>●AI</strong> Discount amount</td>
+                        <td>LGAPOL01.cbl</td>
+                        <td>REGISTRATION-STATE</td>
+                        <td>PREMIUM-DISCOUNT</td>
+                    </tr>
+                    <tr class="bx--expandable-row bx--expandable-row--hidden" data-child-row>
+                        <td colspan="7">
+                            <div class="bx--data-table-expandable-content">
+                                <h5>Discount Information</h5>
+                                <p>Amount of discount applied to the base premium based on various qualifying factors.</p>
+                                <ul>
+                                    <li><strong>Field Format:</strong> 999999.99 (Currency)</li>
+                                    <li><strong>Discount Types:</strong> Multi-policy, Safe driver, Good student, Senior</li>
+                                    <li><strong>Maximum:</strong> 25% of base premium</li>
+                                    <li><strong>Validation:</strong> Cannot exceed base premium amount</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 5: CA-POLICY-PREMIUM -->
+                    <tr class="bx--parent-row" data-parent-row>
+                        <td class="bx--table-expand">
+                            <button class="bx--table-expand__button" type="button" title="Expand row" aria-label="Expand row" aria-expanded="false">
+                                <svg class="bx--table-expand__svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path d="M8 11L3 6l1-1 4 4 4-4 1 1-5 5z"></path>
+                                </svg>
+                            </button>
+                        </td>
+                        <td><span class="bx--link">CA-POLICY-PREMIUM</span></td>
+                        <td><strong>●AI</strong> Final premium amount</td>
+                        <td><strong>●AI</strong> Policy premium amount</td>
+                        <td>LGAPVS01.cbl, LGAPDB01...</td>
+                        <td>VEHICLE-USAGE-TYPE</td>
+                        <td>FINAL-PREMIUM</td>
+                    </tr>
+                    <tr class="bx--expandable-row bx--expandable-row--hidden" data-child-row>
+                        <td colspan="7">
+                            <div class="bx--data-table-expandable-content">
+                                <h5>Final Premium Amount</h5>
+                                <p>The final premium amount after all calculations, discounts, and adjustments have been applied.</p>
+                                <ul>
+                                    <li><strong>Calculation:</strong> Base Premium - Discounts + Fees + Taxes</li>
+                                    <li><strong>Payment Terms:</strong> Annual, Semi-annual, Quarterly, Monthly</li>
+                                    <li><strong>Currency Format:</strong> USD with 2 decimal places</li>
+                                    <li><strong>Billing Program:</strong> LGBILL01.cbl</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Pagination -->
+            <div class="bx--pagination" data-pagination>
+                <div class="bx--pagination__left">
+                    <label class="bx--pagination__text" for="select-1">Items per page:</label>
+                    <div class="bx--select bx--select--inline bx--pagination__per-page-select">
+                        <select class="bx--select-input" id="select-1" data-items-per-page>
+                            <option class="bx--select-option" value="10" selected>10</option>
+                            <option class="bx--select-option" value="20">20</option>
+                            <option class="bx--select-option" value="30">30</option>
+                            <option class="bx--select-option" value="40">40</option>
+                            <option class="bx--select-option" value="50">50</option>
+                        </select>
+                        <svg class="bx--select__arrow" width="16" height="16" viewBox="0 0 16 16">
+                            <path d="m8 11L3 6l1-1 4 4 4-4 1 1-5 5z"></path>
+                        </svg>
+                    </div>
+                    <span class="bx--pagination__text">1–5 of 24 items</span>
+                </div>
+                <div class="bx--pagination__right bx--pagination--no-back">
+                    <div class="bx--pagination__control-buttons">
+                        <button class="bx--pagination__button bx--pagination__button--backward bx--pagination__button--no-index" data-page-backward aria-label="Previous page" disabled>
+                            <svg class="bx--pagination__nav-arrow" width="16" height="16" viewBox="0 0 16 16">
+                                <path d="M5 8l5-5 .7.7L6.4 8l4.3 4.3-.7.7z"></path>
+                            </svg>
+                        </button>
+                        <label class="bx--pagination__text" for="page-number-input">
+                            <span class="bx--pagination__text">1</span>
+                            <span class="bx--pagination__text">of 3 pages</span>
+                        </label>
+                        <button class="bx--pagination__button bx--pagination__button--forward" data-page-forward aria-label="Next page">
+                            <svg class="bx--pagination__nav-arrow" width="16" height="16" viewBox="0 0 16 16">
+                                <path d="M11 8L6 3l-.7.7L9.6 8l-4.3 4.3.7.7z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="chat-panel" class="chat-panel">
+  <div class="chat-panel-header">
+    <span>Chat with Watsonx Assistant</span>
+    <button id="close-chat">&times;</button>
+  </div>
+  <div class="chat-panel-body" id="chat-body"></div>
+  <div class="chat-panel-input">
+    <input type="text" id="chat-input" placeholder="Type a message..." />
+    <button id="send-message">Send</button>
+  </div>
+</div>
+
+<script src="assets/js/app.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const aiBtn = document.querySelector('button[aria-label="AI"]');
+    const chatPanel = document.getElementById('chat-panel');
+    const closeBtn = document.getElementById('close-chat');
+
+    aiBtn.addEventListener('click', () => {
+      chatPanel.classList.add('visible');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      chatPanel.classList.remove('visible');
+    });
+  });
+</script>
+
+
+</body>
+</html>
